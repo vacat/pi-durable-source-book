@@ -30,12 +30,12 @@ jobs:
         run: cargo install --version ${MDBOOK_MERMAID_VERSION} mdbook-mermaid
 
       - name: Build with mdBook
-        run: mdbook build books/pi-durable-source-book
+        run: mdbook build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: books/pi-durable-source-book/book
+          path: book
 
   deploy:
     environment:
